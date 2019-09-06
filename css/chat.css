@@ -1,6 +1,17 @@
+.header__wrapper {
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: #a9bdce;
+}
+
 .chats-body {
   padding: 0;
-  background-color: #a9bdce;
+  padding-top: 130px;
+  background-color: #b2c7d9;
+  min-height: 100vh;
+  height: 2000px;
 }
 
 .chats-body .header,
@@ -8,16 +19,12 @@
   padding: 10px 20px;
 }
 
-.chat-screen {
-  background-color: #b2c7d9;
-  min-height: 100vh;
-}
-
 .chat__write {
+  background-color: white;
   position: fixed;
   width: 100%;
-  background-color: white;
   bottom: 0px;
+  border-radius: 0;
 }
 
 .chat__write .chat__write-column {
@@ -51,7 +58,6 @@
 
 .chat__write-icon-column .chat__write-icon {
   margin-left: 20px;
-  opacity: 0.5;
 }
 
 .chat__write i {
@@ -84,7 +90,6 @@
 
 .chat__messages .chat__timestamp {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   font-size: 12px;
@@ -92,12 +97,6 @@
   margin-bottom: 40px;
   text-transform: uppercase;
   font-weight: 500;
-}
-
-.chat__timestamp .timestamp__line {
-  border: 0.1px solid black;
-  margin-left: 1px;
-  margin-right: 1px;
 }
 
 .chat__messages .chat__timestamp:before,
@@ -114,7 +113,17 @@
 .message {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.message__content {
+  display: block;
+}
+
+.message__content .message__timestamp {
+  font-size: 11px;
+  /* opacity: 0.6; 적용시 header 부분에 내용이 노출되는 버그 발생 */
+  font-weight: 400;
 }
 
 .incoming-message {
@@ -139,9 +148,9 @@
 }
 
 .incoming-message .message__author {
-  margin-top: 25px;
   display: block;
-  font-weight: 600;
+  margin-top: 20px;
+  font-weight: 500;
   font-size: 12px;
 }
 
@@ -155,5 +164,5 @@
 .sent-message .message__bubble {
   border-bottom-right-radius: 0px;
   background-color: #ffeb33;
-  margin-left: 10px;
+  margin-left: 5px;
 }
