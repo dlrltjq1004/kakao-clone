@@ -69,21 +69,23 @@
     </main>
     <div class="chat__write">
       <div class="chat__write-column">
-        <i class="far fa-plus-square"></i>
-      </div>
-      <div class="chat__write-column">
-        <input
+        <input type="button" class="chat__send-btn" value="전송" />
+        <textarea
           type="text"
           placenholder="Send message"
-          class="chat__write-input"
-        />
+          class="chat__write-textarea"
+        >
+        </textarea>
       </div>
-      <div class="chat__write-column">
+      <div class="chat__write-icon-column">
         <span class="chat__write-icon">
-          <i class="far fa-smile-wink"></i>
+          <i class="far fa-smile"></i>
         </span>
         <span class="chat__write-icon">
-          <i class="fas fa-microphone"></i>
+          <i class="fas fa-paperclip"></i>
+        </span>
+        <span class="chat__write-icon">
+          <i class="far fa-image"></i>
         </span>
       </div>
     </div>
