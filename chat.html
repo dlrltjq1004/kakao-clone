@@ -9,7 +9,7 @@
     <title>Chat | Kakao Clone</title>
   </head>
 
-  <body>
+  <body class="chats-body">
     <div class="status-bar">
       <div class="status-bar__column">
         <span class="status-bar__clock">13:54</span>
@@ -29,7 +29,7 @@
             <i class="fas fa-arrow-left"></i>
           </a>
         </div>
-        <h1 class="header__title">Best Friend</h1>
+        <h1 class="header__title">누나</h1>
       </div>
       <div class="header__header-column">
         <span class="header__icon">
@@ -40,25 +40,29 @@
         </span>
       </div>
     </header>
-    <main class="chat">
+    <main class="chat-screen">
       <ul class="chat__messages">
-        <span class="chat__timestamp">금요일, January 11,2019</span>
+        <span class="chat__timestamp">
+          <hr class="timestamp__line" />
+          2019년 8월 13일 화요일
+          <hr class="timestamp__line" />
+        </span>
         <li class="incoming-message message">
-          <img src="images/avatar.jpg" class="m-avatar message__avatar" />
+          <img src="images/frog.PNG" class="m-avatar message__avatar" />
           <div class="message__content">
-            <span class="message__author">Best Friend</span>
-            <div class="message__bubble">
-              Congrats I love you!
-            </div>
+            <span class="message__bubble">
+              돼지야
+            </span>
+            <span class="message__timestamp">오후 5:43</span>
+            <span class="message__author">이기섭</span>
           </div>
-          <span class="message__timestamp"></span>
         </li>
-        <li class="incoming-message message">
-          <span class="message__timestamp"></span>
+        <li class="sent-message message">
+          <span class="message__timestamp">오후 5:45</span>
           <div class="message__content">
-            <div class="message__bubble">
-              Thank you see you soon!
-            </div>
+            <span class="message__bubble">
+              뒤지고 싶냐?
+            </span>
           </div>
         </li>
       </ul>
