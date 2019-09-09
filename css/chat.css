@@ -10,8 +10,7 @@
   padding: 0;
   padding-top: 130px;
   background-color: #b2c7d9;
-  min-height: 100vh;
-  height: 2000px;
+  min-height: 1000vh;
 }
 
 .chats-body .header,
@@ -19,64 +18,73 @@
   padding: 10px 20px;
 }
 
-.chat__write {
-  background-color: white;
+.chat__write-container {
   position: fixed;
-  width: 100%;
   bottom: 0px;
-  border-radius: 0;
-}
-
-.chat__write .chat__write-column {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   display: flex;
-  flex-direction: row-reverse;
-  margin: 10px;
-}
-
-.chat__write-column .chat__send-btn {
-  background-color: #ffec40;
-  color: #99943d;
-  width: 13%;
-  margin-top: 10px;
-  padding: 10px;
-  border: 0px;
-}
-
-.chat__write-column .chat__write-textarea {
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
   width: 100%;
-  border: 0px;
-  resize: none;
 }
 
-.chat__write-column .chat__write-textarea:focus {
+.chat__icon-left {
+  position: absolute;
+  left: 10px;
+}
+
+.chat__icon-right {
+  position: absolute;
+  right: 10px;
+}
+
+.chat__write {
+  margin: 0 auto;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0;
+  padding: 20px 60px;
+  font-size: 16px;
+  border: none;
+  transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+.chat__write:focus {
   outline: none;
+  width: 80%;
+  transform: translateY(-100px);
+  border-radius: 40px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px;
 }
 
-.chat__write-icon-column {
-  margin-bottom: 10px;
+.chat__write:focus ~ .chat__icon {
+  transform: translateY(-100px);
+  /* opacity: 0; */
+  padding-left: 55px;
+  padding-right: 50px;
 }
 
-.chat__write-icon-column .chat__write-icon {
-  margin-left: 20px;
+.chat__icon {
+  font-size: 18px;
+  transition: opacity 0.3s ease-in-out;
+  transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
 }
 
+.chat__write-icon {
+  margin-right: 5px;
+}
 .chat__write i {
   font-size: 22px;
 }
 
 .chat__write-column:nth-child(2) {
   width: 80%;
-}
-
-.chat__write-column .chat__write-input {
-  padding: 20px;
-  width: 100%;
-  border: none;
-  font-size: 14px;
-}
-
-.chat__write-column input:focus {
-  outline: none;
 }
 
 .chat-screen .chat__messages {
