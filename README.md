@@ -2,4 +2,4 @@
  
 KaKao Desktop App Clone
 
-![](https://dlrltjq1004.github.io/kakao-clone/friends.html);
+[홈페이지 주소](https://dlrltjq1004.github.io/kakao-clone/friends.html)
