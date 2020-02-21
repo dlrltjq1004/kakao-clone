@@ -1,0 +1,173 @@
+.header__wrapper {
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: #a9bdce;
+}
+
+.chats-body {
+  padding: 0;
+  padding-top: 130px;
+  background-color: #b2c7d9;
+  min-height: 100vh;
+  height: 2000px;
+}
+
+.chats-body .header,
+.chats-body .status-bar {
+  padding: 10px 20px;
+}
+
+.chat__write-container {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  border-radius: 0;
+}
+
+.chat__write-container .chat__write-column {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.chat__write-container .chat__send-btn {
+  background-color: #ffec40;
+  color: #99943d;
+  width: 13%;
+  padding: 5px;
+  border: 0px;
+}
+
+.chat__write i {
+  font-size: 22px;
+}
+
+.chat__write-column:nth-child(2) {
+  width: 80%;
+}
+
+.chat__write-container .chat__write-icon-column {
+  background-color: white;
+}
+
+.chat__write-icon-column .chat__write-icon {
+  margin-left: 20px;
+  padding-bottom: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.chat__write-container .chat__write-input {
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+  border: none;
+  font-size: 14px;
+  transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+.chat__write-input:focus ~ .chat__write-icon-column .chat__write-icon {
+  opacity: 0;
+}
+
+.chat__write-input:focus ~ .chat__send-btn {
+  opacity: 0;
+}
+
+.chat__write-container .chat__write-input:focus {
+  outline: none;
+  width: 70%;
+  transform: translateY(-100px);
+  border-radius: 40px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px;
+}
+
+.chat-screen .chat__messages {
+  border-top: 1px solid #a9bdce;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+  padding-top: 30px;
+}
+
+.chat__messages .chat__timestamp {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.chat__messages .chat__timestamp:before,
+.chat__messages .chat__timestamp:after {
+  content: "";
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.35);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 16px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.message__content {
+  display: block;
+}
+
+.message__content .message__timestamp {
+  font-size: 11px;
+  /* opacity: 0.6; 적용시 header 부분에 내용이 노출되는 버그 발생 */
+  font-weight: 400;
+}
+
+.incoming-message {
+  align-self: flex-start;
+}
+
+.sent-message {
+  align-self: flex-end;
+}
+
+.incoming-message img {
+  width: 40px;
+  border-radius: 30%;
+  margin-right: 15px;
+}
+
+.message .message__bubble {
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.incoming-message .message__author {
+  display: block;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.incoming-message .message__bubble {
+  background-color: white;
+  border-bottom-left-radius: 0px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.sent-message .message__bubble {
+  border-bottom-right-radius: 0px;
+  background-color: #ffeb33;
+  margin-left: 5px;
+}
